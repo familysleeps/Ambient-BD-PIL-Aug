@@ -1,0 +1,55 @@
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+&nbsp;  
+
+```{r logo, echo=FALSE, fig.align='center'}
+knitr::include_graphics("images/Questionnaire_header_long.svg")
+```
+<br><br> <!-- Add two line breaks -->
+
+
+## Study Contacts
+
+&nbsp;  
+
+#### Research Team:  
+Dr Lorna M. Lopez, Maynooth University (Lead Investigator)  
+Professor Andrew Coogan, Maynooth University (Lead Investigator)  
+Dr Cathy Wyse, Maynooth University (Senior Research Fellow)  
+Mr Sean Farrell, Maynooth University (Research Assistant)  
+Mrs Christiane O'Brien, Maynooth University (Research Assistant)  
+
+&nbsp;  
+
+#### Study Contact/Advisor 	
+Ambient-BD Research Team,  
+Department of Biology,  
+Callan Building,  
+Maynooth University,  
+Maynooth,  
+Co. Kildare
+&nbsp;  
+
+Email:  Ambientbd@mu.ie
+Phone:  087 199 8589
+Web:    https://www.familygenomics.maynoothuniversity.ie/
+
+&nbsp;  
+
+#### Maynooth University Ethics Committee
+Email		research.ethics@mu.ie 
+Phone		(01) 708 6019  
+The data processors for this study are the Family Genomics Research Team in Maynooth University.  
+The Data Controller for this research project is Maynooth University, Maynooth, Co. Kildare.
+&nbsp;  
+Maynooth University Data Protection officer can be contacted at Humanity House, Room 17, dataprotection@mu.ie  
+Maynooth University Data Privacy policies can be found at https://www.maynoothuniversity.ie/data-protection
+
+
+
+
+

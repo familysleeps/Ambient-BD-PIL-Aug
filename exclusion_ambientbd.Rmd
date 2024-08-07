@@ -1,0 +1,47 @@
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r logo, echo=FALSE}
+knitr::include_graphics("images/Questionnaire_header_long.svg")
+```
+
+<br><br> <!-- Add two line breaks -->
+
+
+
+
+
+##  Inclusion criteria for families with a non-autistic child
+ 
+In order to take part in this study you and your family need to meet the following criteria:
+
+
+*  Give informed consent (for adults) and assent (for children)
+*  Have a minimum of two non-autistic children aged 6-10 years old on the 01/01/2024
+*  All family members must have stable medical and behavioural conditions e.g. treated asthma, diabetes etc
+*  Your family must be located in the Republic of Ireland
+*  All family members must be biologically related
+
+Even if you meet the above criteria your family cannot take part in the study if:
+
+*  Any family member does not consent or assent to participate in the study
+*  Children are unable to tolerate sensors
+*  Any family member has a DSM-5 diagnosis of an intellectual disability
+*  Individuals have conditions associated with secondary autism (e.g., Rett syndrome).
+*  Children have a complex neurologic disorder (cerebral palsy, phenylketonuria, tuberous sclerosis, neurofibromatosis, unstable seizure disorder [a seizure within 6 months]).
+*  Children have known genetic syndromes with characteristic behavioural phenotypes, e.g., Fragile X, DiGeorge Syndrome, Smith Magenis Syndrome.
+*  Children have co-morbid psychiatric conditions including schizophrenia and psychosis
+*  Children have an unstable/untreated medical condition (e.g., asthma, diabetes, cystic fibrosis etc) or any other condition/factor that would limit their ability to participate in the study (e.g., severe physical disability)
+*  Children have significant uncorrected hearing or vision loss
+*  Children have known sleeping conditions/disorders (e.g., untreated sleep apnoea)
+*  Any family members had a change in medications and/or health status in the last 3 months
+*  Any family member is taking sleep altering drugs, including melatonin or stimulants
+*  Any families with a known history of obstructive sleep apnoea, narcolepsy, or restless leg syndrome in any family member
+*  An immediate family member or a first degree relative of either parent has a major neuropsychiatric disorder
+*  You are a member of the FamilySleeps team
+*  Either parent is a shift worker
+*  Either parent drinks more alcohol per week than safe HSE recommendations (women 11 units, men 17 units)
+*  Either adult uses recreational drugs 
+*  Either adult is a smoker 
+
+

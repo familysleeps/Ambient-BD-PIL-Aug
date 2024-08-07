@@ -1,0 +1,33 @@
+---
+#title:  "FamilySleeps Participant Information"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r logo, echo=FALSE}
+knitr::include_graphics("images/Questionnaire_header_long.svg")
+```
+
+<br><br> <!-- Add two line breaks -->
+
+## FamilySleeps: Investigation of Circadian Rhythms and Sleep in Families: A Focus on Autism Making a change here is Seán Farrell
+
+ 
+
+### To the family,
+
+Thank you for your interest in our research study “FamilySleeps: Investigation of circadian rhythms and sleep in families: a focus on autism” led by Dr Lorna Lopez. Seán Farrell made a change here
+
+In FamilySleeps we will discover more about sleep and its genetic links with autism. We will use state-of-the-art technology to track sleep over one year in families with and without autistic children. Sleep disruption is a big problem for families with autistic children and this research aims to find ways to improve sleep and quality of life for families with autistic children. Your participation is really important to help us to do that, and I hope that you will consider joining FamilySleeps.
+
+If you are interested in learning more about the research project, please read the information in the participant information pack and if you have any questions at all about the study, please do not hesitate to get in touch with us by email ([familysleeps\@mu.ie](mailto:familysleeps@mu.ie){.email}).
+
+With many thanks for your interest in the research.
+
+Yours sincerely,
+
+
+Associate Professor Department of Biology Maynooth University

@@ -1,0 +1,14 @@
+---
+title: "Team"
+author: "Cathy Wyse"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#```{r, echo=FALSE,out.width="20%",out.height="20%",fig.cap="caption",fig.show='hold',fig.align='center'}
+#knitr::include_graphics(c("images/LL.jpg","images/AB.jpg", "images/LF.jpg", "images/AMP.jpg","imageS/CW.jpg"))
+#```

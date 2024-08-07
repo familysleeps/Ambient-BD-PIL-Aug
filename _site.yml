@@ -1,0 +1,23 @@
+name: "My new website"
+output_dir: 'docs'
+output:
+  html_document:
+    theme: simplex
+    highlight: tango
+    toc: false  # Disable Table of Contents
+    
+navbar:
+  left:
+    - text: "Welcome to Ambient-BD"
+      href: index.html
+    - text: "Participant Information"
+      href: PIL.html
+    - text: "Sensors"
+      href: sensors.html
+    - text: "Exclusion Critera"
+      href: exclusion_ambientbd.html
+    - text: "Sample Consent Form"
+      href: consent.html
+    - text: "Contacts"
+      href: contacts.html
+    
