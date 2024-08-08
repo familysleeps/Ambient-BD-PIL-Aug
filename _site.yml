@@ -2,7 +2,7 @@ name: "My new website"
 output_dir: 'docs'
 output:
   html_document:
-    theme: simplex
+    theme: lumen
     highlight: tango
     toc: false  # Disable Table of Contents
     
