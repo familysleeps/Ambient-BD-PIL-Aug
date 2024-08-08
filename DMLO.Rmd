@@ -9,14 +9,10 @@ knitr::include_graphics("images/Questionnaire_header_long.svg")
 ```
 
 <br><br> <br><!-- Add two line breaks -->
-
-#  Research Study Information Sheets
-
-&nbsp;
-&nbsp;  
+ 
 
 
-##  Dim Light Melatonin Onset Test Information
+#  Dim Light Melatonin Onset Test Information
 Thank you for participating in our research study.  This information sheet will give you full details of how to collect saliva samples.  We will use these saliva samples to investigate changes in a hormone associated with night time (melatonin) in your saliva.  Melatonin is a brain hormone released from the pineal gland at the back of the brain into the blood (and saliva) in order to signal that it is night time.  
 &nbsp;  
 

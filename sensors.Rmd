@@ -10,14 +10,12 @@ knitr::include_graphics("images/Questionnaire_header_long.svg")
 
 <br><br> <br><!-- Add two line breaks -->
 
-#  Research Study Information Sheets
-&nbsp;  
-&nbsp;  
+ 
 
 &nbsp;   
 
 
-##  Wrist-Worn and Bedside Sensors Information
+#  Wrist-Worn and Bedside Sensors Information
 
 
 

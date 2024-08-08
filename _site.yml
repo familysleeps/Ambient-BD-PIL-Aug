@@ -2,8 +2,8 @@ name: "My new website"
 output_dir: 'docs'
 output:
   html_document:
-    theme: lumen
-    highlight: tango
+    theme: cerulean
+    highlight: zenburn
     toc: false  # Disable Table of Contents
     
 navbar:

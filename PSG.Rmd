@@ -10,14 +10,10 @@ knitr::include_graphics("images/Questionnaire_header_long.svg")
 
 <br><br> <br><!-- Add two line breaks -->
 
-#  Research Study Information Sheets
- 
-
-<br><br> <br><!-- Add two line breaks -->
 
   
 
-##  Polysomnography Information
+# Polysomnography Information
 
 Thank you for participating in our research study.  This information sheet will give you full details of what will happen during the polysomnography (PSG) test.  The purpose of PSG is to examine your circadian rhythms and sleep patterns by monitoring changes in your breathing, brain and muscle activity while you sleep.  A trained researcher will visit you at home to fit sensors that will monitor your brain waves, eye movements, heart rate, breathing pattern, blood oxygen levels, body positioning and movement, snoring while you sleep.  
 
