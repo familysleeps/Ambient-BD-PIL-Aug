@@ -10,14 +10,18 @@ navbar:
   left:
     - text: "Welcome to Ambient-BD"
       href: index.html
-    - text: "Participant Information"
+    - text: "Team"
+      href: team.html
+    - text: "Study Information"
       href: PIL.html
+    - text: "Consent Form"
+      href: consent.html
     - text: "Sensors"
       href: sensors.html
-    - text: "Exclusion Critera"
-      href: exclusion_ambientbd.html
-    - text: "Sample Consent Form"
-      href: consent.html
+    - text: "Polysomnography"
+      href: PSG.html
+    - text: "Melatonin Test"
+      href: DMLO.html
     - text: "Contacts"
       href: contacts.html
     
