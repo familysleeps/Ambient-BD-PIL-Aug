@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>sensors.knit</title>
+
+<script src="site_libs/header-attrs-2.26/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/simplex.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Welcome to Ambient-BD</a>
+</li>
+<li>
+  <a href="team.html">Team</a>
+</li>
+<li>
+  <a href="PIL.html">Study Information</a>
+</li>
+<li>
+  <a href="consent.html">Consent Form</a>
+</li>
+<li>
+  <a href="sensors.html">Sensors</a>
+</li>
+<li>
+  <a href="PSG.html">Polysomnography</a>
+</li>
+<li>
+  <a href="DMLO.html">Melatonin Test</a>
+</li>
+<li>
+  <a href="contacts.html">Contacts</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+
+</div>
+
+
+<p><img src="images/Questionnaire_header_long.svg" style="display: block; margin: auto;" /></p>
+<p><br><br> <br><!-- Add two line breaks --></p>
+<div id="research-study-information-sheets" class="section level1">
+<h1>Research Study Information Sheets</h1>
+<p> <br />
+ </p>
+<p> </p>
+<div id="wrist-worn-and-bedside-sensors-information"
+class="section level2">
+<h2>Wrist-Worn and Bedside Sensors Information</h2>
+<p>Thank you for participating in our research study. This information
+sheet will give you full details of how to fit the sensor that you will
+wear on your wrists, and the sensor that will measure sleep and the
+sleep environment in your bedroom. The purpose of this is to examine
+your circadian rhythms and sleep patterns.</p>
+<p> </p>
+<div id="what-is-in-the-sensor-kit" class="section level4">
+<h4>What is in the sensor kit?</h4>
+<p>You will be given a kit that will contain the following:</p>
+<ul>
+<li>Wrist straps containing sensors</li>
+<li>Remote monitoring sensor</li>
+<li>USB power plugs and cables for fitting the remote monitoring
+sensors</li>
+</ul>
+<p> </p>
+<center>
+<img src="images/axivity_somnofy.svg" />
+</center>
+<p><br></p>
+</div>
+<div id="what-you-need-to-do-to-fit-the-wrist-sensor"
+class="section level4">
+<h4>What you need to do to fit the wrist sensor</h4>
+<ol style="list-style-type: decimal">
+<li>Fit the wrist worn sensor</li>
+<li>Either the left or right wrist can be used, but you must not change
+this during the study</li>
+<li>Please remove the sensor for bathing, showering or swimming but keep
+it on at all other times including at night</li>
+<li>Please try to keep the area around the wrist strap clean and
+dry</li>
+<li>Please monitor your wrist for any signs of skin irritation. If this
+happens, please remove and contact us</li>
+<li>If you remove the sensor for swimming or taking a shower, and you
+forget to put it back on, don’t worry, just put it back on as soon as
+you can.</li>
+</ol>
+<p> </p>
+</div>
+<div id="what-you-need-to-do-to-fit-bedside-sensor"
+class="section level4">
+<h4>What you need to do to fit bedside sensor</h4>
+<ol style="list-style-type: decimal">
+<li>Place the sensor on a table next to the bed. Please ensure the
+sensor is approximately 40cm from the bed if possible. Please see below
+for safety information when fitting the sensor.<br />
+</li>
+<li>Plug in the USB plug and connect to the sensor<br />
+</li>
+<li>The sensor will record automatically; you do not need to do anything
+except ensure that it remains plugged in for the duration of the study.
+If the sensor is accidently unplugged, then please try to plug it in as
+soon as you can to avoid data loss<br />
+</li>
+<li>There is no way that you can tell if the sensor is working, but we
+will contact you by email if it is not transmitting data to us</li>
+</ol>
+<p>Your safety is very important to us. When fitting the sensors please
+ensure that you take the following precautions:</p>
+<ul>
+<li>try to plug the sensor in as close to the wall socket as possible,
+while still within appropriate range of the bed<br />
+</li>
+<li>run the cord/wire along the wall where possible</li>
+<li>avoid trailing the wire across the room or walkways</li>
+<li>consider taping the wires to the wall or floor</li>
+</ul>
+<p> </p>
+</div>
+<div id="what-happens-next" class="section level4">
+<h4>What happens next?</h4>
+<p>When we receive the equipment back at our laboratory, we will analyse
+your results.</p>
+<p>Please be aware that this is a research study and we do not yet fully
+understand how the data will relate to health and wellbeing.</p>
+<p>If you have any problems or questions, you can always contact the
+research team:<br />
+<a href="mailto:AmbientBD@mu.ie" class="email">AmbientBD@mu.ie</a> or on
+the research group phone 087 199 8589</p>
+<p> </p>
+</div>
+<div id="summary" class="section level4">
+<h4>Summary</h4>
+<ul>
+<li>Fit the wrist sensor<br />
+</li>
+<li>Fit the bedroom sensor<br />
+</li>
+<li>After 3 months post all equipment and questionnaires back to us in
+the post-paid envelope. We will send you an email reminder when three
+months have passed and it is time to end the study</li>
+</ul>
+<p> </p>
+<div align="center">
+<strong>Thank you very much for your support with our research</strong>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

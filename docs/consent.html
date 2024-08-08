@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>consent.knit</title>
+
+<script src="site_libs/header-attrs-2.26/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/simplex.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Welcome to Ambient-BD</a>
+</li>
+<li>
+  <a href="team.html">Team</a>
+</li>
+<li>
+  <a href="PIL.html">Study Information</a>
+</li>
+<li>
+  <a href="consent.html">Consent Form</a>
+</li>
+<li>
+  <a href="sensors.html">Sensors</a>
+</li>
+<li>
+  <a href="PSG.html">Polysomnography</a>
+</li>
+<li>
+  <a href="DMLO.html">Melatonin Test</a>
+</li>
+<li>
+  <a href="contacts.html">Contacts</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+
+</div>
+
+
+<p><img src="images/Questionnaire_header_long.svg" style="display: block; margin: auto;" /></p>
+<p><br><br> <br><!-- Add two line breaks --></p>
+<div id="research-study-information-sheets" class="section level1">
+<h1>Research Study Information Sheets</h1>
+<p> <br />
+ </p>
+<div
+id="study-title-ambient-and-passive-collection-of-sleep-and-circadian-rhythm-data-ambient-bd"
+class="section level2">
+<h2>Study Title: Ambient and Passive Collection of Sleep and Circadian
+Rhythm Data (AMBIENT-BD)</h2>
+<p> <br />
+ </p>
+<div id="sample-consent-form" class="section level3">
+<h3>Sample Consent Form</h3>
+<p>If you agree to your participation in this research study, you will
+be required to indicate your consent by signing this form.</p>
+<ul>
+<li>I have read the information about the research study. I had the
+opportunity to ask questions and all my questions have been answered to
+my satisfaction.<br />
+</li>
+<li>I confirm that I have read the inclusion and exclusion criteria for
+the study and that I believe I am eligible to participate.<br />
+</li>
+<li>I understand the information and what taking part in this study
+involves.</li>
+<li>I am willing to participate in the project, but I feel under no
+obligation to do so.</li>
+<li>I understand that the information collected in the study will be
+kept strictly confidential.</li>
+<li>I understand that I can withdraw from the study at any stage without
+giving an explanation.</li>
+<li>I freely and voluntarily agree to be a part of this research study,
+having been made fully aware of the risks and benefits.</li>
+</ul>
+<p> </p>
+<div id="consent-to-use-of-personal-sleep-and-questionnaire-data"
+class="section level4">
+<h4>Consent to use of Personal, Sleep and Questionnaire Data</h4>
+<ul>
+<li>I consent to the use of the information collected about me (my
+personal data, and sleep and questionnaire data) for this study.<br />
+</li>
+<li>I consent to my pseudonymised date of birth and sex information
+being shared with a third-party processor (VitalThings, Norway) for
+calculation of sleep variables.<br />
+</li>
+<li>I consent to my pseudonymised saliva samples being shared with a
+third-party processor (Novolytix) for measurement of melatonin.<br />
+</li>
+<li>I consent to my pseudonymised questionnaire data being shared with a
+third-party processor (Onlinesurveys.ac.uk) for collection of data using
+an online platform.</li>
+</ul>
+<p> </p>
+</div>
+<div id="data-retention-and-future-research" class="section level4">
+<h4>Data Retention and Future Research</h4>
+<ul>
+<li>I consent to my data (sensor, questionnaire and sleep data) being
+fully (irrevocably) anonymised after project completion.<br />
+</li>
+<li>I understand that this means my data can no longer be accessed by me
+or anyone else after anonymisation has taken place.<br />
+</li>
+<li>I consent to my anonymised sensor, questionnaire and sleep data
+being retained following completion of this study.<br />
+</li>
+<li>I consent to my anonymised saliva samples being retained after
+completion of this study.<br />
+</li>
+<li>I consent to my anonymised data (sensor, questionnaire and sleep
+data) and saliva samples being shared with other researchers for the
+purposes of future research into sleep and circadian rhythms.<br />
+</li>
+<li>I consent to my anonymised data being released into the public
+domain and made open access to anyone for any purpose by deposition in a
+data repository</li>
+</ul>
+<p>   </p>
+<p><em>It must be recognised that, in some circumstances,
+confidentiality of research data and records may be overridden by courts
+in the event of litigation or in the course of investigation by lawful
+authority. In such circumstances the University will take all reasonable
+steps within law to ensure that confidentiality is maintained to the
+greatest possible extent.</em></p>
+<div align="center">
+<strong>Thank you very much for your support with our research</strong>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
