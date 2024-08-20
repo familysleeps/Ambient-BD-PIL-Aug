@@ -55,5 +55,7 @@ AmbientBD@mu.ie
 &nbsp;  
 
 
-<div align="center"> ####  Thank you very much for your support with our research </div>
+<div align="center">  
+
+####  Thank you very much for your support with our research </div>
        

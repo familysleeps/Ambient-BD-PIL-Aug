@@ -16,16 +16,16 @@ knitr::include_graphics("images/Questionnaire_header_long.svg")
 
 ##  Study Title: Ambient and Passive Collection of Sleep and Circadian Rhythm Data (AMBIENT-BD)  
 &nbsp;  
-Thank you for your interest in our research study. Please read this information sheet carefully and discuss it with your family if you wish. Take your time to read it and don’t feel under any pressure to decide right away. It is important for you to understand the study fully before you decide to participate or not. If anything is unclear to you, or if you have any questions at all about the study, please don’t hesitate to get in touch with us by email (ambientBD@mu.ie).  
+Thank you for your interest in our research study. Please read this information sheet carefully. Take your time to read it and don’t feel under any pressure to decide right away. It is important for you to understand the study fully before you decide to participate or not. If anything is unclear to you, or if you have any questions at all about the study, please don’t hesitate to get in touch with us by email (ambientBD@mu.ie).  
 
-Ambient-BD is a research study that aims to investigate sleep and circadian rhythms.  It is funded by the Wellcome Trust and will run from 2023-2028.  Ambient-BD is a joint project between Maynooth University and the University of Edinburgh.  The first 2.5 years of Ambient-BD will be carried out by biologists in Maynooth, and the final 2.5 by psychiatrists at the University of Edinburgh.  You are invited to participate in the first part of the study that will be carried out at Maynooth University.  
+Ambient-BD is a research study that aims to investigate sleep and circadian rhythms.  It is funded by the Wellcome Trust and will run from 2023-2028.  Ambient-BD is a joint project between Maynooth University and the University of Edinburgh.   You are invited to participate in the first part of the study that will be carried out at Maynooth University.  
 <br>
 
 #### Why are we doing this research study? 
 
-Circadian rhythms are changes in physiology and behaviour that follow a 24-hour cycle.  For example, the daily rhythm in body temperature, alertness and the sleep wake cycle are all examples of circadian rhythms.  In fact, almost every cell in the human body is regulated by a circadian clock, and this does not depend on the light dark cycle or the timing of food or exercise.  Circadian timing has been “hard-wired” into our physiology by evolution so that humans have 24h rhythms by default.  
+Circadian rhythms are changes in physiology and behaviour that follow a 24-hour cycle.  For example, the daily rhythm in body temperature, alertness and the sleep wake cycle are all examples of circadian rhythms.  In fact, almost every cell in the human body is regulated by a circadian clock, and this does not depend on the light dark cycle or the timing of food or exercise.  Circadian timing has been “hard-wired” into our physiology by evolution so that humans have 24-hour rhythms by default.  
 
-Deviation from this 24h rhythm is associated with detrimental effects on health and well being, and particularly for mental health.  This might occur through irregular lifestyles, such as shiftwork, but many diseases are also associated with disturbed circadian rhythms especially neuropsychiatric conditions.   People with bipolar disorder show signs of disrupted control of 24 hour rhythms such as problems with sleep timing, and mood swings.  The overall aim of Ambient-BD project is to investigate the reasons for this, but in order to do that, we need to validate methods that allow us to measure circadian rhythms.  
+Deviation from this 24-hour rhythm is associated with detrimental effects on health and well being, and particularly for mental health.  This might occur through irregular lifestyles, such as shiftwork, but many diseases are also associated with disturbed circadian rhythms especially neuropsychiatric conditions.   People with bipolar disorder show signs of disrupted control of 24-hour rhythms such as problems with sleep timing and mood swings.  The overall aim of Ambient-BD project is to investigate the reasons for this, but in order to do that, we need to validate methods that allow us to measure circadian rhythms.  
 
 The best method for measuring sleep is polysomnography (PSG), a test that monitors brain and heart activity and movement while people sleep.  PSG can only be used to monitor sleep for 1-2 nights, and is not suitable for routine sleep assessment.  The timing of sleep can be assessed by measuring increases in a brain hormone called melatonin that increases in the hours before bedtime.  This test is called a “Dim Light Melatonin Onset (DLMO)” test and involves measuring how quickly the melatonin levels in your saliva increase around bedtime.  
 
@@ -33,7 +33,7 @@ In Ambient-BD we will develop and test new ways to measure rhythms using radar s
 <br>
 
 #### Why am I being asked to take part in this research study? 
-We have asked you to take part because you are a healthy adult with no history of sleep disorder or neuropsychiatric disease.  
+We have asked you to take part because you are a healthy adult with no history of sleep disorder or neuropsychiatric disorders.  
 
 To participate you must:
 
@@ -48,7 +48,7 @@ To participate you must:
 
 You can not participate if you:  
 
-* Have current or previous diagnosis of mental illness (eg depression, schizophrenia, bipolar disorder)
+* Have current or previous diagnosis of a neuropsychiatric disorder (eg depression, schizophrenia, bipolar disorder)
 * Drink more than 11 (women) or 17 (men) alcoholic drinks per week
 * Have any chronic medical condition or disability
 * Take any prescription or over the counter medication that could affect sleep
@@ -72,7 +72,7 @@ You can withdraw at any time and without giving a reason.  If you decide to do s
 <br>
 
 #### How will the study be carried out?  
-The studies will be carried out as you undergo your usual activities over 3 months, you will not be required to come to Maynooth University at any point.  A researcher will visit your home to fit the sensors for PSG and to show you how to collect saliva samples and you will set up the bedroom sensor and wristwatch yourself.  We will always give you instructions and all materials and equipment needed to complete the study and we will always be available to answer any questions you have about the study.   
+The studies will be carried out as you undergo your usual activities over 3 months.  A researcher will fit the sensors for PSG and to show you how to collect saliva samples and you will set up the bedroom sensor and wristwatch yourself.  We will always give you instructions and all materials and equipment needed to complete the study and we will always be available to answer any questions you have about the study.   
 
 You will be asked to do the following tasks:
 
@@ -197,15 +197,15 @@ Anonymised data means that all connections to your identity have been irretrieva
 <br>
 
 #### Will any of my data be shared with anyone outside Maynooth University?  
-Some of your de-identified (not your identifiable information) personal information (date of birth, sex and sensor data) will be shared with three companies that we use to analyse data.  The companies are (i) VitalThings (Norway), (ii) Onlinesurveys.ac.uk and (iii) Novolytix (Switzerland).  Details of these companies and why we need to share data with them are given below.  We emphasise that we will never share data that could identify you with anyone outside of the study team.  None of these companies will be given your name, all of the data shared will be identified by a study ID number.  
+Some of your de-identified (not your identifiable information) personal information (date of birth, sex and sensor data) will be shared with three companies that we use to analyse data.  The companies are (i) VitalThings (Norway), (ii) Onlinesurveys.ac.uk (UK) and (iii) Novolytix (Switzerland).  Details of these companies and why we need to share data with them are given below.  We emphasise that we will never share data that could identify you with anyone outside of the study team.  None of these companies will be given your name, all of the data shared will be identified by a study ID number.  
 
 VitalThings supply the radar sensors that we use and they are responsible for the transmission of data from the sensors to a cloud based platform that they maintain, and where the data are stored until the researchers at Maynooth University can download it.  This method of temporary data storage in the cloud is the most efficient way that we can acquire and store large amounts of sensor data.  They require access to your age and sex in order to calculate your sleep information.  These data are identified by a study ID and can never be used to infer your identity.  They will be made completely anonymous by Maynooth University researchers once the data have been downloaded.  
 
-Novolytix will analyse your saliva samples to measure melatonin.  We will send them your samples labelled with your study ID number but they will not be given any other information.  They will report the results to us and then they will delete all your data and destroy any remaining saliva sample.  
-
 Onlinesurveys.ac.uk are a specialist company that deliver surveys for academic research online.  They provide the platform that collects your questionnaire data.  The surveys will be identified by a study ID number only and there is no way that onlinesurveys.ac.uk can know which participant any survey relates to.  
 
-A data processing agreement will be signed between Maynooth University and VitalThings, onlinesurveys.ac.uk and Novolytix that will ensure that they maintain high standards of data security and governance and that they are GDPR compliant.  
+Novolytix will analyse your saliva samples to measure melatonin.  We will send them your samples labelled with your study ID number but they will not be given any other information.  They will report the results to us and then they will delete all your data and destroy any remaining saliva sample.  
+
+A data processing agreement has been signed between Maynooth University and VitalThings, onlinesurveys.ac.uk and Novolytix that will ensure that they maintain high standards of data security and governance and that they are GDPR compliant.  
 
 These companies will never be given access to your name, address or contact information. Following completion of the study, they will delete your data.  After the study we will delete all your identifiable details so that your data are completely anonymous.  We will store these anonymised data indefinitely in Maynooth University and in data repositories so that they can be used in future research and/or for teaching purposes (for example, student projects).  
 
@@ -219,7 +219,7 @@ To summarise exactly who your data will be shared with:
 <br>
 
 #### What will happen to my saliva samples at the end of the study?  
-All saliva samples will be retained by Maynooth University indefinitely after anonymisation and may be shared with other researchers interested in addressing the hypothesis of Ambient-BD.  They will not be made available for any other purpose.  Unfortunately we cannot ask for your explicit contest to participate in future studies, since the samples will have been anonymised at this point.  Instead we ask for your consent in advance for your samples to be used in future studies that address the importance of sleep and circadian rhythms.  Future studies will only be allowed to analyse metabolic biochemicals and hormones in your saliva;  we will never extract or analyse any genetic information from your samples.  We are not able to tell you now what these studies will be, as they will involve the scientific techniques that will be available in the future.  Remember that the samples will be anonymised and can’t be linked to you in any way.  
+All saliva samples will be retained by Maynooth University indefinitely after anonymisation and may be shared with other researchers interested in addressing the hypothesis of Ambient-BD.  They will not be made available for any other purpose.  Unfortunately we cannot ask for your explicit contest to participate in future studies, since the samples will have been anonymised at this point.  Instead we ask for your consent in advance for your samples to be used in future studies that address the importance of sleep and circadian rhythms.  Future studies will only be allowed to analyse biochemicals and hormones in your saliva;  we will never extract or analyse any genetic information from your samples.  We are not able to tell you now what these studies will be, as they will involve the scientific techniques that will be available in the future.  Remember that the samples will be anonymised and can’t be linked to you in any way.  
 <br>
 
 #### What happens to my data and saliva samples if I decide to withdraw?
@@ -241,7 +241,7 @@ Only the authorised researchers named above, working in the research team at May
 #### How will my privacy be protected?  
 Your personal information will be kept entirely confidential, and we will exercise our duties in handling your personal data as per the General Data Protection Regulation (GDPR). Protecting your privacy is extremely important to all the research team members at Maynooth University. Personal Identifiers, such as your name or email are never used to label your questionnaires, sensor data or saliva samples. All data will be stored on password protected files on a secure network in Maynooth University. No one outside of the research team in Maynooth University will have access to your name or contact information and all other data will be labelled with your unique study ID.  Please note that even the members of the research team that are working on the study on a daily basis will not know from which participant the data came from.  To find this out, they would need to access a controlled file that connects your study ID to your identity, and to do so would be a violation of the research undertaking agreement that they have signed with Maynooth University.  You will be known only by your study ID number;  we retain identifiable information only for the purposes of contacting you during the study period.  
 
-Although all measures will be taken to protect your privacy, there is a remote risk that a connection to your contact details could be made, e.g., through unauthorised access to servers of premises at Maynooth University. To minimise this risk, any files containing these data are password protected and have restricted access, or are in locked cabinets in locked offices. Any attempt to identify you in this manner would be a legal breach against the permitted use of the research data.  
+Although all measures will be taken to protect your privacy, there is a remote risk that a connection to your contact details could be made, e.g., through unauthorised access to servers or premises at Maynooth University. To minimise this risk, any files containing these data are password protected and have restricted access, or are in locked cabinets in locked offices. Any attempt to identify you in this manner would be a legal breach against the permitted use of the research data.  
 
 When you have returned the sensors, questionnaires, and samples, and the study is complete, your contact details will be incinerated in the case of written records, and electronic data will be reformatted or overwritten by the research team at Maynooth University and all data will be anonymous.  
 <br>
@@ -270,7 +270,7 @@ Other than the cost of your time, there are no costs to you personally by partic
 <br>
 
 #### Who is funding the study? 
-This project is funded by the Wellcome Trust (www.wellcome.ac.uk)  
+This project is funded by the Wellcome Trust (www.wellcome.ac.uk; grant number 226944/Z/23/Z)  
 <br>
 
 #### What happens if I wish to make a complaint? 
@@ -287,12 +287,16 @@ This study has been reviewed and received ethical approval from the Biomedical a
 
 #### Where can I get further information? 
 You can get further information from our research team   
-Family Genomics Research Team,  
+Ambient-BD Research Team,  
 Department of Biology,  
 Maynooth University,  
 Co. Kildare  
-familysleeps@mu.ie  
+ambientBD@mu.ie  
 <br>
 
-The data processors for this study are the Family Genomics Research Team in Maynooth University.  
-The Data Controller for this research project is Maynooth University, Maynooth, Co. Kildare. Maynooth University Data Protection officer can be contacted at Humanity House, Room 17, who can be contacted at dataprotection@mu.ie. Maynooth University Data Privacy policies can be found at https://www.maynoothuniversity.ie/data-protection. 
+The data processors for this study are the Ambient-BD Research Team in Maynooth University.  
+The Data Controller for this research project is Maynooth University, Maynooth, Co. Kildare.  
+
+Maynooth University Data Protection officer can be contacted at 17 Rye Hall Extension, Maynooth University, Co.Kildare  
+
+Maynooth University Data Privacy policies can be found at https://www.maynoothuniversity.ie/data-protection. 
