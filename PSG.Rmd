@@ -17,7 +17,7 @@ knitr::include_graphics("images/Questionnaire_header_long.svg")
 
 Thank you for participating in our research study.  This information sheet will give you full details of what will happen during the polysomnography (PSG) test.  The purpose of PSG is to examine your circadian rhythms and sleep patterns by monitoring changes in your breathing, brain and muscle activity while you sleep.  A trained researcher will visit you at home to fit sensors that will monitor your brain waves, eye movements, heart rate, breathing pattern, blood oxygen levels, body positioning and movement, snoring while you sleep.  
 
-Polysomnography is a non-invasive, painless procedure that is often carried out in sleep research centre and hospital clinics.  The only potential side effect is mild skin irritation caused by the adhesives used to attach test sensors onto the skin.  
+Polysomnography is a non-invasive, painless procedure that is often carried out in sleep research centre and hospital clinics.  The only potential side effect is mild skin irritation caused by the adhesives used to attach test sensors onto the skin.  To help identify participants that might have irritation, we will send you some stickers to test before the PSG and if you develop irritation you will need to withdraw from the study. Please note that all our equipment is medical grade and most people will complete the PSG with no issues.  
 &nbsp;  
 
 <center>  
@@ -32,7 +32,7 @@ You will need to avoid napping in the afternoon before the sleep study or doing 
 &nbsp;  
 
 ####   What will happen on the evening of your PSG? 
-The researchers will arrive at your house about 1 hour before your normal sleep time.  They will fit the sensors and set up the system to record automatically.  You will not need to take any action.  You can sleep in your usual night clothes as long as these don’t interfere with any of the sensors.   
+The researchers will arrive at your house or you will go to the lab at Maynooth University a few hours before your normal sleep time.  They will fit the sensors and set up the system to record automatically.  You will not need to take any action to start the test.  You can sleep in your usual night clothes as long as these don’t interfere with any of the sensors.   
 
 Electrodes will be placed on your scalp, temples, chest and legs and will be attached to you using a mild adhesive and connected by wires to a control unit.  This is a small computer that is worn on a strap around the chest.  A small clip will be placed on your finger to monitor oxygen levels in your blood, and your breathing will be monitored by a plastic tube in your nostrils. Elastic belts will be placed around your chest and belly to measure your inhaled and exhaled breaths.  
 
@@ -48,7 +48,7 @@ When we receive the equipment back at our laboratory, we will analyse your resul
 &nbsp;  
 
 If you have any problems or questions, you can always contact the research team:  
-    AmbientBD@mu.ie or 087 199 8589. 
+    AmbientBD@mu.ie or 0861645998 / 0861646021
 &nbsp; 
 
 

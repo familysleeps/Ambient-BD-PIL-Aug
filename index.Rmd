@@ -39,4 +39,7 @@ Yours sincerely,
 
 ![](images/signLL.svg)
 
-Associate Professor Department of Biology Maynooth University
+Associate Professor  
+Department of Biology  
+Maynooth University  
+

@@ -143,7 +143,7 @@ No, none of our sensor have GPS or capacity to identify or record their location
 <br>
 
 #### Can the bedside radar sensors identify what I am doing?  
-The sensors record data on movement but it is not possible to identify what someone is doing other then whether they are awake or not.  We apply algorithms to the movement data at each timepoint to classify whether the person is asleep or awake – it is a binary variable, either awake or asleep, nothing else.  The data cannot be used to detect sexual or any other activity nor would we ever attempt to detect anything other than the binary classification of being awake (1) or asleep (0).  
+The sensors record data on movement but it is not possible to identify what someone is doing other then whether they are awake or not.  We apply algorithms to the movement data at each timepoint to classify whether the person is asleep or awake – it is a binary variable, either awake or asleep, nothing else.  The data cannot be used to detect sexual or any other activity nor would we ever attempt to detect anything other than the classification of being awake or asleep.  
 <br>
 
 ####  Can the bedside radar sensor record data from my partner?
@@ -157,7 +157,7 @@ You will receive data from the radar sensors that show how your own sleep patter
 
 In recognition of the time and effort it will take you to perform the PSG and melatonin tests on two occasions, we will give you a gift voucher of 250 euros when you have completed both tests.   
 
-We will not return the results of your melatonin or PSG tests, as these are research data and it would be difficult to understand what they mean at an individual level.  
+We will not return the results of your melatonin tests, as these are research data and it would be difficult to understand what they mean at an individual level.  
 <br>
 
 #### What if I already have problems with my sleep?  
@@ -171,7 +171,7 @@ Even if you think you have normal sleep and enrol in this study, there is a poss
 #### Are there any risks to me or others if I take part in the study?  
 We have taken great care to identify and address any potential safety concerns, and we do not consider that taking part presents a risk to the participants but we do ask you to pay attention to the following sources of risk.  Remember if you are unsure about anything, please feel free to contact our research team at AmbientBD@mu.ie or 087 199 8589.   
 
-1. There is a small possibility that you might develop skin irritation from the wrist worn strap or from the paste and tape used to attach the sensors to your skin in the PSG study, and we will ask you to be vigilant to this, and to remove the strap immediately and withdraw from the study if signs of irritation are detected.   All the items we use are medical-grade and we do not anticipate skin irritation to be a serious risk.  
+1. There is a small possibility that you might develop skin irritation or redness from the wrist worn strap or from the paste and tape used to attach the sensors to your skin in the PSG study, and we will ask you to be vigilant to this, and to remove the strap immediately and withdraw from the study if signs of irritation are detected.   All the items we use are medical-grade and we do not anticipate skin irritation to be a serious risk.  We will send you two test sensor stickers to wear on your chest for 24 hours before the test, so that participant prone to skin irriation do not progress to the full PSG.
 
 2. There is a chance that the cables and wires of the sensors could be a trip hazard and we ask you to take care when moving near them and to make sure that all ends are tucked away.  
 3. The DLMO test is performed in dim light and we ask that you are especially careful not to trip or fall at this time.  
@@ -282,7 +282,7 @@ We will not contact you again after all data, equipment and sensors have been re
 <br>
 
 #### Who has approved this study?  
-This study has been reviewed and received ethical approval from the Biomedical and Life Sciences Research Ethics Sub-Committee (BSRESC) of Maynooth University on XXXXX. If you would like more information about the ethics committee’s approval of this study, please contact research.ethics@mu.ie.  
+This study has been reviewed and received ethical approval from the Biomedical and Life Sciences Research Ethics Sub-Committee (BSRESC) of Maynooth University on 12/09/2023 (BSRESC-2023-36286). If you would like more information about the ethics committee’s approval of this study, please contact research.ethics@mu.ie.  
 <br>
 
 #### Where can I get further information? 
