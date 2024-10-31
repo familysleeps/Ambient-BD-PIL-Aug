@@ -5,7 +5,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 ```{r logo,fig.align='center', echo=FALSE}
-knitr::include_graphics("images/Questionnaire_header_long.svg")
+knitr::include_graphics("images/Questionnaire_header_long.jpg")
 ```
 
 <br><br> <br><!-- Add two line breaks -->
