@@ -19,10 +19,11 @@ knitr::include_graphics("images/Questionnaire_header_long.jpg")
 &nbsp;  
 &nbsp;  
 
-* Dr Lorna M. Lopez, Department of Biology, Maynooth University (Lead Investigator)  
+* Professor Lorna M. Lopez, Department of Biology, Maynooth University (Lead Investigator)  
 * Professor Andrew Coogan, Department of Psychology, Maynooth University (Lead Investigator)  
 * Dr Cathy Wyse, Department of Biology, Maynooth University (Senior Research Fellow)  
-* Sean Farrell, Department of Biology, Maynooth University (Research Assistant)   
+* Ms Emma Ryan, Department of Biology, Maynooth University (Research Assistant)   
+* Mr Benji Kirke, Department of Biology, Maynooth University (Research Assistant)   
 
 <br>
 Please visit the Ambient-BD project website to learn more about the rest of the Ambient-BD team members 
