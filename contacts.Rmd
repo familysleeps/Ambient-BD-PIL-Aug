@@ -16,11 +16,13 @@ knitr::include_graphics("images/Questionnaire_header_long.jpg")
 
 &nbsp;  
 
-#### Research Team:  
-Dr Lorna M. Lopez, Maynooth University (Lead Investigator)  
-Professor Andrew Coogan, Maynooth University (Lead Investigator)  
+#### Research Team  
+Miss Emma Ryan, Maynooth University (Research Assistant)  
+Mr Benji Kirke, Maynooth University (Research Assistant)  
 Dr Cathy Wyse, Maynooth University (Senior Research Fellow)  
-Mr Sean Farrell, Maynooth University (Research Assistant)  
+Professor Andrew Coogan, Maynooth University (Lead Investigator)  
+Professor Lorna M. Lopez, Maynooth University (Lead Investigator)  
+
 
 &nbsp;  
 
@@ -34,7 +36,6 @@ Co. Kildare
 &nbsp;  
 
 Email:  Ambientbd@mu.ie
-Phone:  087 199 8589
 Web:    https://www.familygenomics.maynoothuniversity.ie/chronobiologyofmentalhealth/ambient-bd
 
 &nbsp;  
