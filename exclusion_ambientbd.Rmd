@@ -24,7 +24,7 @@ A a participant of the bipolar group in Ambient-BD you need to meet the followin
 *	Have access to a mobile phone and internet.
 * Have a diagnosis of BD (DSM5 criteria) with at least one previous manic or hypomanic episode.  
 * Willing to have a short online interview with a psychiatrist member of the Ambient-BD team to have your diagnosis confirmed.   
-* Clinically euthymic (no episodes of depression, hypomania or mania) for at least three months at the time of enrolement in the study.
+* Clinically euthymic (no episodes of depression, hypomania or mania) for at least three months at the time of enrollment in the study.
 
 Even if you meet the conditions above, you cannot take part if you have:  
 
