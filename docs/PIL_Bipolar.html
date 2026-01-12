@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>PIL_Bipolar.knit</title>
+
+<script src="site_libs/header-attrs-2.27/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Welcome to Ambient-BD</a>
+</li>
+<li>
+  <a href="team.html">Team</a>
+</li>
+<li>
+  <a href="PIL.html">Study Information</a>
+</li>
+<li>
+  <a href="consent.html">Consent Form</a>
+</li>
+<li>
+  <a href="sensors.html">Sensors</a>
+</li>
+<li>
+  <a href="PSG.html">Polysomnography</a>
+</li>
+<li>
+  <a href="DMLO.html">Melatonin Test</a>
+</li>
+<li>
+  <a href="contacts.html">Contacts</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+
+</div>
+
+
+<p><img src="images/Questionnaire_header_long.jpg" width="5532" style="display: block; margin: auto;" /></p>
+<p><br><br> <br><!-- Add two line breaks --></p>
+<div
+id="research-study-information-sheet-for-participants-with-bipolar-disorder"
+class="section level1">
+<h1>Research Study Information Sheet for Participants with Bipolar
+Disorder</h1>
+<p> <br />
+ </p>
+<div
+id="study-title-ambient-and-passive-collection-of-sleep-and-circadian-rhythm-data-ambient-bd"
+class="section level2">
+<h2>Study Title: Ambient and Passive Collection of Sleep and Circadian
+Rhythm Data (AMBIENT-BD)</h2>
+<p> <br />
+Thank you for your interest in our research study. Please read this
+information sheet carefully. Take your time to read it and don’t feel
+under any pressure to decide right away. It is important for you to
+understand the study fully before you decide to participate or not. If
+anything is unclear to you, or if you have any questions at all about
+the study, please don’t hesitate to get in touch with us by email (<a
+href="mailto:ambientBD@mu.ie" class="email">ambientBD@mu.ie</a>).</p>
+<p>Ambient-BD is a research study that aims to investigate sleep and
+circadian rhythms. It is funded by the Wellcome Trust and will run from
+2023-2028. Ambient-BD is a joint project between Maynooth University and
+the University of Edinburgh. You are invited to participate in the first
+part of the study that will be carried out at Maynooth University.<br />
+<br></p>
+<div id="why-are-we-doing-this-research-study" class="section level4">
+<h4>Why are we doing this research study?</h4>
+<p>Circadian rhythms are changes in physiology and behaviour that follow
+a 24-hour cycle. For example, the daily rhythm in body temperature,
+alertness and the sleep wake cycle are all examples of circadian
+rhythms. In fact, almost every cell in the human body is regulated by a
+circadian clock, and this does not depend on the light dark cycle or the
+timing of food or exercise. Circadian timing has been “hard-wired” into
+our physiology by evolution so that humans have 24-hour rhythms by
+default.</p>
+<p>Deviation from this 24-hour rhythm is associated with detrimental
+effects on health and well being, and particularly for mental health.
+This might occur through irregular lifestyles, such as shiftwork, but
+many diseases are also associated with disturbed circadian rhythms
+especially neuropsychiatric conditions. People with bipolar disorder
+show signs of disrupted control of 24-hour rhythms such as problems with
+sleep timing and mood swings. The overall aim of Ambient-BD project is
+to investigate the reasons for this, but in order to do that, we need to
+validate methods that allow us to measure circadian rhythms.</p>
+<p>The best method for measuring sleep is polysomnography (PSG), a test
+that monitors brain and heart activity and movement while people sleep.
+PSG can only be used to monitor sleep for 1-2 nights, and is not
+suitable for routine sleep assessment. The timing of sleep can be
+assessed by measuring increases in a brain hormone called melatonin that
+increases in the hours before bedtime. This test is called a “Dim Light
+Melatonin Onset (DLMO)” test and involves measuring how quickly the
+melatonin levels in your saliva increase around bedtime.</p>
+<p>In Ambient-BD we will develop and test new ways to measure rhythms
+using radar sensors, and compare them to PSG and DLMO.<br />
+<br></p>
+</div>
+<div id="why-am-i-being-asked-to-take-part-in-this-research-study"
+class="section level4">
+<h4>Why am I being asked to take part in this research study?</h4>
+<p>We have asked you to take part because you are a healthy adult with a
+diagnosis of bipolar disorder</p>
+<p>To participate you must be:</p>
+<ul>
+<li>Fluent in English and capable of giving signed, informed
+consent<br />
+</li>
+<li>Aged between 18-50<br />
+</li>
+<li>Willing and able to install sleep sensors in your bedroom and to
+wear a wrist worn accelerometer<br />
+</li>
+<li>Willing to wear polysomnography sensors on four separate nights
+during the 3-month study duration<br />
+</li>
+<li>Willing for researchers to visit your home<br />
+</li>
+<li>Willing to collect multiple saliva samples over 8 hours<br />
+</li>
+<li>Have access to a mobile phone and internet<br />
+</li>
+<li>Have a diagnosis of BD (DSM5 criteria) with at least one previous
+manic or hypomanic episode<br />
+</li>
+<li>Willing to have a short online interview with a psychiatrist member
+of the Ambient-BD team to have your diagnosis confirmed<br />
+</li>
+<li>Clinically euthymic (no episodes of depression, hypomania or mania)
+for at least three months at the time of enrolment in the study</li>
+</ul>
+<p>Even if you meet the conditions above, you cannot take part if you
+have:</p>
+<ul>
+<li>Infectious disease<br />
+</li>
+<li>History of allergy or any skin condition that might be exacerbated
+by exposure to wristwatch straps and electrode paste<br />
+</li>
+<li>Chronic disease (eg diabetes, COPD, cancer, heart disease) *
+Intellectual disability<br />
+</li>
+<li>Pregnancy<br />
+</li>
+<li>Shiftworker<br />
+</li>
+<li>Use of recreational drugs or alcohol intake that exceeds HSE
+recommendations (&lt; 11 drinks per week for women, &lt; 17 for
+men)<br />
+</li>
+<li>Any disability that might affect sleep or the ability to collect
+saliva samples in dim light or sleep in PSG sensors<br />
+</li>
+<li>Intention to travel across a time zone of more than 2h during the
+study period<br />
+</li>
+<li>Ever sleep with a pet or a child. Because of their small size it is
+difficult for the radar sensor to detect your sleep while they are
+there. It is possible to assess sleep if an adult sleeping partner is
+present<br />
+</li>
+<li>Have any intention to travel across meridians (time difference more
+than 2 hours) during the 3-month study period. This is because “jetlag”
+disrupts your sleep</li>
+</ul>
+<p><br></p>
+</div>
+<div id="do-i-have-to-take-part" class="section level4">
+<h4>Do I have to take part?</h4>
+<p>It is important to know that you do not have to take part in this
+study if you do not wish to. You can change your mind about
+participating in this study at any time, even after the study has begun.
+If you decide that you do not want to participate, this will have no
+effect on your or their current or future participation in any other
+research studies. You do not have to provide a reason for deciding not
+to participate or changing your mind. If you wish to opt out at any
+point, please contact the research team (Study email: <a
+href="mailto:ambientBD@mu.ie" class="email">ambientBD@mu.ie</a>), and we
+will organise this for you.<br />
+<br></p>
+</div>
+<div
+id="what-happens-if-i-change-my-mind-about-participating-during-the-study"
+class="section level4">
+<h4>What happens if I change my mind about participating during the
+study?</h4>
+<p>You can withdraw at any time and without giving a reason. If you
+decide to do so, we will immediately remove all of your data from the
+study, including your sensor, sleep and questionnaire data. Electronic
+copies of data will be overwritten, and hard copies will be destroyed by
+incineration. Biological samples will be destroyed by
+incineration.<br />
+<br></p>
+</div>
+<div id="how-will-the-study-be-carried-out" class="section level4">
+<h4>How will the study be carried out?</h4>
+<p>The studies will be carried out as you undergo your usual activities
+over 3 months. A researcher will fit the sensors for PSG and to show you
+how to collect saliva samples and you will set up the bedroom sensor and
+wristwatch yourself. We will always give you instructions and all
+materials and equipment needed to complete the study and we will always
+be available to answer any questions you have about the study.</p>
+<p>You will be asked to do the following tasks:</p>
+<ol style="list-style-type: decimal">
+<li><p>Wear a wrist-worn activity monitor (like a Fitbit) at all times
+(day and night) for 3 months. You will need to remove the monitor for
+showering or swimming, and put it back on as soon as possible
+afterwards. The device will monitor movement and light exposure
+continuously throughout the day and night.</p></li>
+<li><p>Fit a bedside sensor that monitors movement and environment in
+your bedroom for 3 months (see image below). The sensor records the
+following information:</p>
+<ul>
+<li>Movement</li>
+<li>Room temperature</li>
+<li>Sound in decibels</li>
+<li>Light</li>
+</ul>
+<p>This sensor uses radar to monitor movement and we can use this
+information to design algorithms that can guess whether you are awake or
+asleep. We cannot tell what you are doing when you are awake. It records
+noise levels, not sounds or voices and ambient light. This sensor
+transmits data via the internet to a cloud platform where we can
+download your data.<br />
+</p>
+<p>The sensor has its own internet connection and you will not be able
+to download the data or access the sensor controls. It is unobtrusive
+and makes no sound, and has no display. If you go on holiday or stay
+somewhere else overnight, we will ask you to bring their bedside sensor,
+if possible. You will need to keep the modem and the sensor plugged into
+the mains at all times to power the sensor.</p></li>
+<li><p>Complete some questionnaires about your health, lifestyle and
+sleep. The questionnaires will be completed at three time points during
+the 3-month study. Questionnaires will take approximately 10 minutes
+each to complete. You will need to keep a sleep diary for the 3 month
+study period. You will also need to complete a short online interview
+with a psychiatrist member of the Ambient-BD research team to confirm
+your diagnosis of bipolar disorder.</p></li>
+<li><p>Perform a melatonin test that will involve collecting saliva
+samples every 30 mins for 6 hours before bedtime and 2 hours after
+bedtime. This is called a “Dim Light Melatonin Onset (DLMO)” test and it
+measures how quickly the melatonin levels in your saliva increase at
+bedtime. You will need to do this once at the beginning and once at the
+end of the study. You will receive instructions from a trained
+researcher on how to collect these saliva samples and we will provide
+you with saliva collection kits. Melatonin is a hormone of darkness and
+light will surpress it straightaway. For this reason, the test must be
+performed in dim light and we will help you to adjust the light levels
+in your home for that. During the test, you will be allowed to read
+using a booklight that we will provide, and use screens at low light
+intensity. You can eat and drink during the test but not leave the
+dim-lit area so you will need to make sure you have any food that you
+need in the room where the test will take place.</p></li>
+<li><p>Complete a Polysomnography Sleep Test for 2 nights at the
+beginning and end of the 3-month study. This will happen at the same
+time as the melatonin test. Researchers will visit your home each night
+and fit the following sensors:</p>
+<ul>
+<li>A nasal cannula to monitor airflow</li>
+<li>A control unit strapped to your chest</li>
+<li>ECG sensors to monitor heart rate and rhythm</li>
+<li>Straps to monitor chest and upper abdominal wall movement.<br />
+</li>
+<li>Oxygen saturation sensor worn on the finger</li>
+<li>Skin sensors to monitor muscle tone in your chin, leg, chin and
+eye</li>
+</ul>
+<p>You will need to sleep overnight wearing all of these sensors and
+then remove them yourself the following morning.</p></li>
+</ol>
+<center>
+<p><img src="images/all_sensors.svg" /></p>
+<center>
+<p><br> <br></p>
+</div>
+<div id="when-will-i-need-to-do-all-these-tasks-if-i-agree-to-take-part"
+class="section level4">
+<h4>When will I need to do all these tasks if I agree to take part?</h4>
+<p>The tasks in this study will be arranged at times that suit you.
+There will need to be 3 months where you are able to wear the wrist
+strap and use the bedside sensor continuously. It is no problem to take
+this items to another location if you need to travel during this time.
+During the 3 months you will need to have 2 days in month 1 and 2 days
+in month 3 that you are free to do the PSG and DLMO tests in your
+home.</p>
+<p>After you have read this information sheet, and if you decide that
+the study is something you would still be interested in, we will have a
+short conversation (in person, by phone, MS Teams or email) to ensure
+that you are eligible to participate. This conversation is confidential
+and the information you give us at this time will not be recorded. If
+you meet the inclusion criteria, we will then send you information on
+what is involved and give you time to read this and to ask questions.
+Next we will ask you to meet again (in person or online, your choice) to
+give written consent to participate. Next you will need to have a
+screening PSG session to make sure that your sleep patterns are healthy
+before you can continue participating. If that is clear, then we will
+enroll you into the study and arrange a 3-month study window that suits
+you to participate. All tests will be carried out in your home and you
+must be happy for the researchers to visit to set up the PSG sensors and
+show you how to perform the melatonin tests. The researchers will be
+male or female trained scientists, but they are not medical doctors and
+you will not be offered any medical advice at any point during this
+study. You will have the names and contact details of the researchers
+who you can contact at any time during the study, should you have any
+questions. You will need to complete questionnaires about your heath,
+lifestyle and sleep at the beginning, middle and end of the 3-month
+study. The diagram below summarises what you will need to do and
+when.</p>
+<p>DMLO stands for Dim Light Melatonin Onset, this test will monitor the
+rate at which melatonin (a hormone that signals darkness) rises in your
+saliva as bedtime approaches. PSG stands for polysomnography, a test
+that monitors sleep by measuring brain and muscle activity.</p>
+<p>To summarise, over the 3 months we will:</p>
+<ul>
+<li>record questionnaire data at three timepoints</li>
+<li>continuously record daily movement data using the wrist worn
+sensors, and the bedside sensor</li>
+<li>measure melatonin evening increase in saliva on and measure sleep by
+PSG on two occasions during the 3-months</li>
+</ul>
+<p><br></p>
+</div>
+<div id="can-the-sensors-record-images" class="section level4">
+<h4>Can the sensors record images?</h4>
+<p>No, the sensors only measure movement in space, none of them can
+acquire images.<br />
+<br></p>
+</div>
+<div id="can-the-sensors-record-what-i-am-saying-or-other-sounds"
+class="section level4">
+<h4>Can the sensors record what I am saying or other sounds?</h4>
+<p>No, the sensors record noise levels in decibels, they can’t identify
+sounds or record speech.<br />
+<br></p>
+</div>
+<div id="can-the-sensors-identify-my-location" class="section level4">
+<h4>Can the sensors identify my location?</h4>
+<p>No, none of our sensor have GPS or capacity to identify or record
+their location.<br />
+<br></p>
+</div>
+<div id="can-the-bedside-radar-sensors-identify-what-i-am-doing"
+class="section level4">
+<h4>Can the bedside radar sensors identify what I am doing?</h4>
+<p>The sensors record data on movement but it is not possible to
+identify what someone is doing other then whether they are awake or not.
+We apply algorithms to the movement data at each timepoint to classify
+whether the person is asleep or awake – it is a binary variable, either
+awake or asleep, nothing else. The data cannot be used to detect sexual
+or any other activity nor would we ever attempt to detect anything other
+than the classification of being awake or asleep.<br />
+<br></p>
+</div>
+<div id="can-the-bedside-radar-sensor-record-data-from-my-partner"
+class="section level4">
+<h4>Can the bedside radar sensor record data from my partner?</h4>
+<p>The sensors will only record data from you and not your partner (as
+long as you are the person closest to the sensor). Your participation in
+this study does affect your partner as we will record light, sound and
+temperature data in their bedroom, and we ask you to make sure anyone
+sharing your bedroom is happy for you to participate.<br />
+<br></p>
+</div>
+<div id="are-there-any-benefits-to-me-if-i-take-part-in-the-study"
+class="section level4">
+<h4>Are there any benefits to me if I take part in the study?</h4>
+<p>Medical advances depend on the goodwill of volunteers that
+participate in research studies, and we believe that you will benefit
+from knowing you are making a valuable contribution to finding ways to
+help people with bipolar disorder. We are very grateful to everyone that
+participates in our research.</p>
+<p>You will receive data from the radar sensors that show how your own
+sleep patterns and the environmental conditions in your bedroom vary
+over 3 months. This will benefit you by helping you to understand more
+about how you sleep over a long period of time. We will give you this
+data for your own interest at the end of the study, but we are not
+medical doctors and we won’t be able to help you understand it.</p>
+<p>In recognition of the time and effort it will take you to perform the
+PSG and melatonin tests on two occasions, we will give you a gift
+voucher of 250 euros when you have completed both tests.</p>
+<p>We will not return the results of your melatonin tests, as these are
+research data and it would be difficult to understand what they mean at
+an individual level.<br />
+<br></p>
+</div>
+<div
+id="are-there-any-risks-to-me-or-others-if-i-take-part-in-the-study"
+class="section level4">
+<h4>Are there any risks to me or others if I take part in the
+study?</h4>
+<p>We have taken great care to identify and address any potential safety
+concerns, and we do not consider that taking part presents a risk to the
+participants but we do ask you to pay attention to the following sources
+of risk. Remember if you are unsure about anything, please feel free to
+contact our research team at <a href="mailto:AmbientBD@mu.ie"
+class="email">AmbientBD@mu.ie</a> or 087 199 8589.</p>
+<ol style="list-style-type: decimal">
+<li><p>There is a small possibility that you might develop skin
+irritation or redness from the wrist worn strap or from the paste and
+tape used to attach the sensors to your skin in the PSG study, and we
+will ask you to be vigilant to this, and to remove the strap immediately
+and withdraw from the study if signs of irritation are detected. All the
+items we use are medical-grade and we do not anticipate skin irritation
+to be a serious risk. We will send you two test sensor stickers to wear
+on your chest for 24 hours before the test, so that participant prone to
+skin irriation do not progress to the full PSG.</p></li>
+<li><p>There is a chance that the cables and wires of the sensors could
+be a trip hazard and we ask you to take care when moving near them and
+to make sure that all ends are tucked away.<br />
+</p></li>
+<li><p>The DLMO test is performed in dim light and we ask that you are
+especially careful not to trip or fall at this time.<br />
+<br></p></li>
+</ol>
+</div>
+<div
+id="what-identifiable-information-about-me-will-be-used-as-part-of-this-study"
+class="section level4">
+<h4>What identifiable information about me will be used as part of this
+study?</h4>
+<p>With your consent, when we enroll you in the study, we will record
+your name, address and contact details (email and phone number). We will
+use your contact details to contact you about the research study, and
+not for any other reason. This data that can identify is highly
+confidential and will be destroyed when you have completed the study or
+in December 2026, whichever comes first.</p>
+<p>As soon as you have enrolled in the study, you will be assigned a
+unique study ID code - this is called de-identification. Any information
+we gather from that point (sensor data, melatonin data, and
+questionnaire data) will be associated with the ID code and not with
+your name or contact details. This is not only for electronically stored
+data. For example, physical copies of questionnaires, your saliva
+samples will be labelled with your unique study IDs and not your name.
+Only the authorised research team at Maynooth University will have
+access to the ‘key’ that links your name to your ID code, and this
+information will be stored on an encrypted file on a password protected
+computer at Maynooth University. Neither your name nor ID code will be
+used when reporting the results of this research for publication or
+presentation; your contribution will be entirely anonymous. In this way,
+even the researchers working directly with your data will not know which
+participant it comes from; this link can only be made by retrieving the
+key.</p>
+<p>The only reason we have a key at all is so that we can contact you to
+collect sensors and follow up with results, and we will destroy the key
+and all your contact information as soon as possible. This will be when
+you have completed the study, and the contact information of all
+participants will be destroyed in December 2026.<br />
+<br></p>
+</div>
+<div id="what-other-data-will-be-collected-about-me-during-the-study"
+class="section level4">
+<h4>What other data will be collected about me during the study?</h4>
+<p>There are three types of data in this study (i) personal,
+identifiable data, (ii) personal data, (iii) anonymised data.</p>
+<p>The personal, identifiable information that we will collect are your
+name, address and contact details (phone number and email address).
+These data can be used to identify you and are highly confidential. They
+will never be written on any of your research data items such as
+questionnaires or samples or sensor results. They will be linked to your
+research data via your study ID number and kept in a locked office or
+secure network that is separate to the research data stores. This means
+that even the Ambient-BD researchers will not be able to tell the
+identify of the participants from the research data they are working on.
+We will delete your identifiable data as soon as the study is over.</p>
+<p>The research data that we collect about you includes personal
+information such as data on sleep, sensor data, lifestyle and health,
+age and sex, but these data are not unique to you and cannot be used to
+identify you without access to the ID code key. These data are
+de-identified until the end of the study (or Dec 2026 whichever is
+first) at which point all identifiable data are deleted and all personal
+data are anonymised. The personal research data will be identified only
+by an ID number and will be stored in a secure location on the MU
+server. De-identified data will not be shared with anyone outside the
+research team.</p>
+<p>Anonymised data means that all connections to your identity have been
+irretrievably destroyed and there is no way that anyone (not even the
+researchers) can ever find out that information came from you. We ask
+your consent to retain this anonymous information indefinitely and to
+share it with other researchers and via scientific repositories.
+Repositories are public databases that can be accessed by anyone and are
+very important for progressing science and preventing other scientists
+repeating work that has already been done. Releasing our research data
+into the public domain like this means that science will benefit for
+many years after our project has finished, and that the experiments do
+not have to be repeated.<br />
+<br></p>
+</div>
+<div
+id="will-any-of-my-data-be-shared-with-anyone-outside-maynooth-university"
+class="section level4">
+<h4>Will any of my data be shared with anyone outside Maynooth
+University?</h4>
+<p>Some of your de-identified (not your identifiable information)
+personal information (date of birth, sex and sensor data) will be shared
+with three companies that we use to analyse data. The companies are (i)
+VitalThings (Norway), (ii) Onlinesurveys.ac.uk (UK) and (iii) Novolytix
+(Switzerland). Details of these companies and why we need to share data
+with them are given below. We emphasise that we will never share data
+that could identify you with anyone outside of the study team. None of
+these companies will be given your name, all of the data shared will be
+identified by a study ID number.</p>
+<p>VitalThings supply the radar sensors that we use and they are
+responsible for the transmission of data from the sensors to a cloud
+based platform that they maintain, and where the data are stored until
+the researchers at Maynooth University can download it. This method of
+temporary data storage in the cloud is the most efficient way that we
+can acquire and store large amounts of sensor data. They require access
+to your age and sex in order to calculate your sleep information. These
+data are identified by a study ID and can never be used to infer your
+identity. They will be made completely anonymous by Maynooth University
+researchers once the data have been downloaded.</p>
+<p>Onlinesurveys.ac.uk are a specialist company that deliver surveys for
+academic research online. They provide the platform that collects your
+questionnaire data. The surveys will be identified by a study ID number
+only and there is no way that onlinesurveys.ac.uk can know which
+participant any survey relates to.</p>
+<p>Novolytix will analyse your saliva samples to measure melatonin. We
+will send them your samples labelled with your study ID number but they
+will not be given any other information. They will report the results to
+us and then they will delete all your data and destroy any remaining
+saliva sample.</p>
+<p>A data processing agreement has been signed between Maynooth
+University and VitalThings, onlinesurveys.ac.uk and Novolytix that will
+ensure that they maintain high standards of data security and governance
+and that they are GDPR compliant.</p>
+<p>These companies will never be given access to your name, address or
+contact information. Following completion of the study, they will delete
+your data. After the study we will delete all your identifiable details
+so that your data are completely anonymous. We will store these
+anonymised data indefinitely in Maynooth University and in data
+repositories so that they can be used in future research and/or for
+teaching purposes (for example, student projects).</p>
+<p>To summarise exactly who your data will be shared with:</p>
+<ol style="list-style-type: decimal">
+<li>Your identifiable data (eg name, address) will not be shared with
+anyone outside the research team at Maynooth University</li>
+<li>Your de-identified personal data will be shared with companies that
+help us to collect data - VitalThings, Novolytix and
+onlinesurveys.ac.uk</li>
+<li>There will be no limit on sharing of your anonymised data at the end
+of the study – they are open access for use by anyone. This will never
+include any data that could possibly identify you.</li>
+</ol>
+<p><br></p>
+</div>
+<div id="what-will-happen-to-my-saliva-samples-at-the-end-of-the-study"
+class="section level4">
+<h4>What will happen to my saliva samples at the end of the study?</h4>
+<p>All saliva samples will be retained by Maynooth University
+indefinitely after anonymisation and may be shared with other
+researchers interested in addressing the hypothesis of Ambient-BD. They
+will not be made available for any other purpose. Unfortunately we
+cannot ask for your explicit contest to participate in future studies,
+since the samples will have been anonymised at this point. Instead we
+ask for your consent in advance for your samples to be used in future
+studies that address the importance of sleep and circadian rhythms.
+Future studies will only be allowed to analyse biochemicals and hormones
+in your saliva; we will never extract or analyse any genetic information
+from your samples. We are not able to tell you now what these studies
+will be, as they will involve the scientific techniques that will be
+available in the future. Remember that the samples will be anonymised
+and can’t be linked to you in any way.<br />
+<br></p>
+</div>
+<div
+id="what-happens-to-my-data-and-saliva-samples-if-i-decide-to-withdraw"
+class="section level4">
+<h4>What happens to my data and saliva samples if I decide to
+withdraw?</h4>
+<p>If you decide to withdraw from the study, then all data will be
+deleted and saliva samples will be destroyed; nothing will be retained
+for anonymisation in this case. You will be completely removed from the
+study. If you withdraw we will ensure that our third party processor,
+VitalThings deletes your de-identified data from the sensors, sex and
+date of birth data. If you complete the study, your data will be
+anonymised and it will not be possible to withdraw from the study after
+this point.<br />
+<br></p>
+</div>
+<div
+id="will-my-personal-data-andor-sensor-data-be-used-in-future-studies"
+class="section level4">
+<h4>Will my personal data and/or sensor data be used in future
+studies?</h4>
+<p>The data we collect will be anonymised once the sensors, samples and
+questionnaires have been returned, so it will not be possible for
+anyone, including the research team to identify the participants from
+the datasets. With your consent, we will retain these anonymous datasets
+indefinitely. These datasets may be used in teaching or research.<br />
+<br></p>
+</div>
+<div id="will-i-have-access-to-the-data-generated-by-future-studies"
+class="section level4">
+<h4>Will I have access to the data generated by future studies?</h4>
+<p>No. Following completion of the study or withdrawal from the study,
+your identifiable personal information including your name, address and
+contact details will be destroyed. All other data (sensor, melatonin and
+questionnaire data) will then be anonymised (it will no longer be linked
+back to you), and it will not be possible for us or anyone to identify
+you. For this reason, we cannot return any of your results after
+anonymization and you will not be able to withdraw, request access, or
+to make any amendments after the data are anonymised. This anonymised
+data will be held in Maynooth University and made available in public
+repositories for indefinite open access.<br />
+<br></p>
+</div>
+<div
+id="who-will-access-my-identifiable-personal-data-as-part-of-this-study"
+class="section level4">
+<h4>Who will access my identifiable personal data as part of this
+study?</h4>
+<p>Only the authorised researchers named above, working in the research
+team at Maynooth University will have access to your identifiable
+personal data including your name, address, and contact details. All
+other data (sensor data, age, biological sex, clinical information,
+melatonin data and sleep data) are only identifiable by your unique
+study ID. We will never label your questionnaires, saliva samples or
+sensor data with your name or contact details. VitalThings, Novolytix
+and onlinesurveys.ac.uk cannot access your identifiable information.
+Only the research team at MU can ever find out your identify, and this
+is only for the purposes of contacting you about the study. As soon as
+the study is completed all your identifiable information will be
+destroyed and there is no way that you can ever be linked to study data
+again.<br />
+<br></p>
+</div>
+<div id="how-will-my-privacy-be-protected" class="section level4">
+<h4>How will my privacy be protected?</h4>
+<p>Your personal information will be kept entirely confidential, and we
+will exercise our duties in handling your personal data as per the
+General Data Protection Regulation (GDPR). Protecting your privacy is
+extremely important to all the research team members at Maynooth
+University. Personal Identifiers, such as your name or email are never
+used to label your questionnaires, sensor data or saliva samples. All
+data will be stored on password protected files on a secure network in
+Maynooth University. No one outside of the research team in Maynooth
+University will have access to your name or contact information and all
+other data will be labelled with your unique study ID. Please note that
+even the members of the research team that are working on the study on a
+daily basis will not know from which participant the data came from. To
+find this out, they would need to access a controlled file that connects
+your study ID to your identity, and to do so would be a violation of the
+research undertaking agreement that they have signed with Maynooth
+University. You will be known only by your study ID number; we retain
+identifiable information only for the purposes of contacting you during
+the study period.</p>
+<p>Although all measures will be taken to protect your privacy, there is
+a remote risk that a connection to your contact details could be made,
+e.g., through unauthorised access to servers or premises at Maynooth
+University. To minimise this risk, any files containing these data are
+password protected and have restricted access, or are in locked cabinets
+in locked offices. Any attempt to identify you in this manner would be a
+legal breach against the permitted use of the research data.</p>
+<p>When you have returned the sensors, questionnaires, and samples, and
+the study is complete, your contact details will be incinerated in the
+case of written records, and electronic data will be reformatted or
+overwritten by the research team at Maynooth University and all data
+will be anonymous.<br />
+<br></p>
+</div>
+<div id="what-is-the-lawful-basis-to-use-my-personal-data"
+class="section level4">
+<h4>What is the lawful basis to use my personal data?</h4>
+<p>As part of the study your personal data will only be used for
+scientific research which is in the public interests (Article 6 (e) and
+Article 9( 2) (j) of General Data Protection Regulation (GDPR)).<br />
+<br></p>
+</div>
+<div id="what-are-my-rights" class="section level4">
+<h4>What are my rights?</h4>
+<p>Under the GDPR, you are entitled to:</p>
+<ul>
+<li>The right to access to your data and receive a copy of it</li>
+<li>The right to restrict or object to processing of your data</li>
+<li>The right to object to any further processing of the information we
+hold about you (except where it is de-identified)</li>
+<li>The right to have inaccurate information about you corrected or
+deleted</li>
+<li>The right to receive your data in a portable format and to have it
+transferred to another data controller</li>
+<li>The right to request deletion of your data.</li>
+</ul>
+<p>These rights to access to your data are forfeit in this study by the
+complete anonymisation of the data. Complete anonymisation is to protect
+the privacy and data security of the participants, but it also means
+that it is impossible for you to access your data for any reason. We
+will not record the identity of the participants that provided any
+specific item of data, so we will not be able to give you access to your
+data or to make any amendments.</p>
+<p>It must be recognized that, in some circumstances, confidentiality of
+research data and records may be overridden by courts in the event of
+litigation or in the course of investigation by lawful authority. In
+such circumstances the University will take all reasonable steps within
+law to ensure that confidentiality is maintained to the greatest
+possible extent.<br />
+<br></p>
+</div>
+<div id="will-it-cost-me-anything-if-i-agree-to-take-part"
+class="section level4">
+<h4>Will it cost me anything if I agree to take part?</h4>
+<p>Other than the cost of your time, there are no costs to you
+personally by participating in this research study.<br />
+<br></p>
+</div>
+<div id="who-is-funding-the-study" class="section level4">
+<h4>Who is funding the study?</h4>
+<p>This project is funded by the Wellcome Trust (www.wellcome.ac.uk;
+grant number 226944/Z/23/Z)<br />
+<br></p>
+</div>
+<div id="what-happens-if-i-wish-to-make-a-complaint"
+class="section level4">
+<h4>What happens if I wish to make a complaint?</h4>
+<p>If you have concerns or questions about any aspect of the study or if
+you wish to make a complaint, please speak to the researcher you are
+working with or contact the research team (<a
+href="mailto:AmbientBD@mu.ie" class="email">AmbientBD@mu.ie</a>) who
+will do their best to assist you. If they are unable to answer your
+question, please contact the Secretary of the Maynooth University Ethics
+Committee at <a href="mailto:research.ethics@mu.ie"
+class="email">research.ethics@mu.ie</a> or +353 (0)1 708 6019. Please be
+assured that your concerns will be dealt with in a sensitive
+manner.<br />
+<br></p>
+</div>
+<div id="will-i-be-contacted-again" class="section level4">
+<h4>Will I be contacted again?</h4>
+<p>We will not contact you again after all data, equipment and sensors
+have been returned at which point we will destroy your name, address and
+contact details.<br />
+<br></p>
+</div>
+<div id="who-has-approved-this-study" class="section level4">
+<h4>Who has approved this study?</h4>
+<p>This study has been reviewed and received ethical approval from the
+Biomedical and Life Sciences Research Ethics Sub-Committee (BSRESC) of
+Maynooth University on 12/09/2023 (BSRESC-2023-36286). If you would like
+more information about the ethics committee’s approval of this study,
+please contact <a href="mailto:research.ethics@mu.ie"
+class="email">research.ethics@mu.ie</a>.<br />
+<br></p>
+</div>
+<div id="where-can-i-get-further-information" class="section level4">
+<h4>Where can I get further information?</h4>
+<p>You can get further information from our research team<br />
+Ambient-BD Research Team,<br />
+Department of Biology,<br />
+Maynooth University,<br />
+Co. Kildare<br />
+<a href="mailto:ambientBD@mu.ie" class="email">ambientBD@mu.ie</a><br />
+<br></p>
+<p>The data processors for this study are the Ambient-BD Research Team
+in Maynooth University.<br />
+The Data Controller for this research project is Maynooth University,
+Maynooth, Co. Kildare.</p>
+<p>Maynooth University Data Protection officer can be contacted at 17
+Rye Hall Extension, Maynooth University, Co.Kildare</p>
+<p>Maynooth University Data Privacy policies can be found at <a
+href="https://www.maynoothuniversity.ie/data-protection"
+class="uri">https://www.maynoothuniversity.ie/data-protection</a>.</p>
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

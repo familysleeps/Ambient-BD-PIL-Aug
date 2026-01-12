@@ -39,7 +39,7 @@ Yours sincerely,
 
 ![](images/signLL.svg)
 
-Professor  
+Professor           
 Department of Biology  
 Maynooth University  
 
